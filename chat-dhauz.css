@@ -1,0 +1,168 @@
+:root {
+  /* ===== Dhauz theme ===== */
+  /* Brand & Accents */
+  --chat--color-primary: #e74266;                 /* Dhauz pink (CTA/accent) */
+  --chat--color-primary-shade-50: #d93e60;
+  --chat--color-primary-shade-100: #c43956;
+
+  --chat--color-secondary: #20b69e;               /* Teal accent seen across materials */
+  --chat--color-secondary-shade-50: #1aa28c;
+
+  /* Neutrals (cool/clean, like site) */
+  --chat--color-white: #ffffff;
+  --chat--color-light: #f5f7fb;                   /* lighter page bg */
+  --chat--color-light-shade-50: #e9edf5;          /* card/border */
+  --chat--color-light-shade-100: #c9d0de;         /* muted icons */
+  --chat--color-medium: #b7bfce;
+  --chat--color-dark: #0f1630;                    /* dark header/nav tone */
+  --chat--color-disabled: #8a91a1;
+  --chat--color-typing: #404656;
+
+  /* Base Layout */
+  --chat--spacing: 1rem;
+  --chat--border-radius: 0.75rem;                 /* rounder, modern */
+  --chat--transition-duration: 0.2s;
+  --chat--font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+
+  /* Window */
+  --chat--window--width: 420px;
+  --chat--window--height: 620px;
+  --chat--window--bottom: var(--chat--spacing);
+  --chat--window--right: var(--chat--spacing);
+  --chat--window--z-index: 9999;
+  --chat--window--border: 1px solid var(--chat--color-light-shade-50);
+  --chat--window--border-radius: 1rem;
+  --chat--window--margin-bottom: var(--chat--spacing);
+  --chat--body--background: var(--chat--color-light); /* soft paper bg */
+  --chat--footer--background: var(--chat--color-light);
+  --chat--footer--color: var(--chat--color-dark);
+
+  /* Header */
+  --chat--header-height: auto;
+  --chat--header--padding: calc(var(--chat--spacing) * 1.25);
+  --chat--header--background: var(--chat--color-dark);
+  --chat--header--color: #eaf0ff;                 /* high contrast text */
+  --chat--header--border-top: none;
+  --chat--header--border-bottom: none;
+  --chat--header--border-left: none;
+  --chat--header--border-right: none;
+  --chat--heading--font-size: 1.25rem;
+  --chat--subtitle--font-size: 0.9rem;
+  --chat--subtitle--line-height: 1.6;
+
+  /* Messages */
+  --chat--message--font-size: 0.98rem;
+  --chat--message--padding: calc(var(--chat--spacing) * 0.875) var(--chat--spacing);
+  --chat--message--border-radius: 1rem;
+  --chat--message-line-height: 1.55;
+  --chat--message--margin-bottom: calc(var(--chat--spacing) * 0.75);
+
+  /* Bot bubble: light card w/ subtle edge */
+  --chat--message--bot--background: var(--chat--color-white);
+  --chat--message--bot--color: #0d1230;
+  --chat--message--bot--border: 1px solid var(--chat--color-light-shade-50);
+
+  /* User bubble: brand pink gradient & white text */
+  --chat--message--user--background: linear-gradient(135deg, #e74266 0%, #c43956 100%);
+  --chat--message--user--color: var(--chat--color-white);
+  --chat--message--user--border: none;
+
+  /* Code/pre in messages (better contrast on light bg) */
+  --chat--message--pre--background: #0f1739;      /* deep slate */
+  --chat--messages-list--padding: calc(var(--chat--spacing) * 1.1);
+
+  /* Toggle (launcher) */
+  --chat--toggle--size: 60px;
+  --chat--toggle--width: var(--chat--toggle--size);
+  --chat--toggle--height: var(--chat--toggle--size);
+  --chat--toggle--border-radius: 18px;
+  --chat--toggle--background: linear-gradient(135deg, #e74266 0%, #d93e60 100%);
+  --chat--toggle--hover--background: #e74266;
+  --chat--toggle--active--background: #c43956;
+  --chat--toggle--color: #fff;
+
+  /* Input area */
+  --chat--textarea--height: 56px;
+  --chat--textarea--max-height: 30rem;
+  --chat--input--font-size: 0.98rem;
+  --chat--input--border: 1px solid var(--chat--color-light-shade-50);
+  --chat--input--border-radius: 0.75rem;
+  --chat--input--padding: 0.9rem 1rem;
+  --chat--input--background: var(--chat--color-white);
+  --chat--input--text-color: #111827;
+  --chat--input--line-height: 1.5;
+  --chat--input--placeholder--font-size: var(--chat--input--font-size);
+  --chat--input--border-active: 1px solid #b9c6ff;  /* subtle focus ring */
+  --chat--input--left--panel--width: 2rem;
+
+  /* Buttons */
+  --chat--button--color: #fff;
+  --chat--button--background: #e74266;
+  --chat--button--padding: 0.55rem 1rem;
+  --chat--button--border-radius: 0.75rem;
+  --chat--button--hover--color: #fff;
+  --chat--button--hover--background: #d93e60;
+  --chat--close--button--color-hover: #e74266;
+
+  /* Send & File buttons (minimal, with hover feedback) */
+  --chat--input--send--button--background: transparent;
+  --chat--input--send--button--color: #6b7280;
+  --chat--input--send--button--background-hover: #f1f4fb;
+  --chat--input--send--button--color-hover: #374151;
+
+  --chat--input--file--button--background: transparent;
+  --chat--input--file--button--color: var(--chat--color-secondary);
+  --chat--input--file--button--background-hover: #f1f4fb;
+  --chat--input--file--button--color-hover: #188a77;
+
+  --chat--files-spacing: 0.35rem;
+}
+
+/* Optional: subtle depth to bubbles & panels */
+.chat-window,
+.chat-message {
+  box-shadow: 0 8px 22px rgba(15, 22, 48, 0.06);
+}
+
+/* Wider reading measure to match site’s roomy layout */
+.chat-message {
+  max-width: 62%;
+}
+
+/* Monospace blocks like Dhauz tech posts */
+.chat-message pre,
+.chat-message code {
+  color: #e8edff;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.65rem;
+}
+
+/* Tighter header typography rhythm */
+.chat-header h1 {
+  letter-spacing: 0.2px;
+  font-weight: 700;
+}
+.chat-header p {
+  opacity: 0.9;
+}
+
+/* Focus styles (a11y) */
+:focus-visible {
+  outline: 3px solid #b9c6ff;
+  outline-offset: 2px;
+}
+
+/* (Optional) Dark mode variant */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --chat--body--background: #0b1026;
+    --chat--footer--background: #0b1026;
+    --chat--header--background: #0b1026;
+    --chat--message--bot--background: #0f1630;
+    --chat--message--bot--color: #eaf0ff;
+    --chat--input--background: #0f1630;
+    --chat--input--text-color: #eaf0ff;
+    --chat--input--border: 1px solid #1a2244;
+    --chat--input--border-active: 1px solid #3b4dbb;
+  }
+}
