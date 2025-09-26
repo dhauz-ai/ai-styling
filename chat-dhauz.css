@@ -1,3 +1,9 @@
+/*! Dhauz Chat Theme Overrides
+ *  Built on top of @n8n/chat@0.58.0
+ *  Author: Dhauz AI
+ *  License: MIT (same as n8n/chat CSS)
+ */
+@charset "UTF-8";
 :root {
   /* ===== Dhauz theme ===== */
   /* Brand & Accents */
